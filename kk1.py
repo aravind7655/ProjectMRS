@@ -30,7 +30,10 @@ def img(value):
     lis1=[]
     lis=Link[Link['Name of movie']==value]['Link']
     lis1=lis.tolist()
-    return lis1[0]
+    if len(lis1)>1:
+        return lis1[0]
+    else:
+        return lis1
 
 
 if st.button('Show Recommendation'):
