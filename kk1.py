@@ -35,7 +35,7 @@ def img(value):
 
 if st.button('Show Recommendation'):
     ki = recommend(selected_movie)
-    col1, col2, col3, col4, col5,col6, col7, col8, col9, col10 = st.columns(10)
+    col1, col2, col3, col4, col5,col6, col7, col8, col9, col10 = st.beta_columns(10)
     with col1:
         st.image(img(ki[0]), width=120, use_column_width=120, clamp=False, channels="RGB", output_format="auto")
         st.write(f"**{ki[0]}**")
